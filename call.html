@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Query Form</title>
+  <link
+      rel="icon"
+      href="https://assets.onecompiler.app/42w2q9fsx/42wc52p5w/Screenshot_20241024-191337_enhanced-01-01-removebg-preview.png"
+      type="image/icon type"
+    />
+ <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 430px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#goH{
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    margin-top:-519px;
+}
+ </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body> 
+    <a id="goH" href="index.html"><i class="fa-solid fa-house"></i><br>GO TO Home</a>
+  <div class="form-container">
+    <h2>Help Query Form</h2>
+    <form id="helpForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="Technical Support">Technical Support</option>
+        <option value="Billing">Billing</option>
+        <option value="General Inquiry">General Inquiry</option>
+        <option value="Payment Issue">Payment Issue</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+
+      <button type="submit">Submit</button>
+   
+    </form>
+    
+  </div>
+
+</body>
+
+<script >
+  document.getElementById("helpForm").addEventListener("submit", function(event) {
+event.preventDefault(); // Prevents the default form submission
+
+// Collect form data
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const category = document.getElementById("category").value;
+const message = document.getElementById("message").value;
+
+// Simple validation
+if (name && email && category && message) {
+  alert("Thank you for your query, " + name + "! We will get back to you shortly.");
+  document.getElementById("helpForm").reset();
+} else {
+  alert("Please fill in all fields.");
+}
+});document.getElementById("helpForm").addEventListener("submit", function(event) {
+event.preventDefault(); // Prevents the default form submission
+
+// Collect form data
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const category = document.getElementById("category").value;
+const message = document.getElementById("message").value;
+
+// Simple validation
+if (name && email && category && message) {
+  alert("Thank you for your query, " + name + "! We will get back to you shortly.");
+  document.getElementById("helpForm").reset();
+} else {
+  alert("Please fill in all fields.");
+}
+});
+</script>
+</html>
